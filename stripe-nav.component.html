@@ -1,0 +1,34 @@
+<nav class="top">
+  <div class="dropdownBackground" #dropdownBackground>
+    <span class="arrow"></span>
+  </div>
+  <!--TODO: implement ng-content?-->
+  <ul class="cool" #navbar>
+    <li #listItem (mouseenter)="handleEnter($event)" (mouseleave)="handleLeave($event)">
+      <a href="#">About Me</a>
+      <div class="dropdown dropdown1">
+        <div class="bio">
+          <h3>Follow Along Menu</h3>
+          <p>Angular 4 implementation of a Wes Bos "follow-along" menu inspired by Stripe</p>
+        </div>
+      </div>
+    </li>
+    <li #listItem (mouseenter)="handleEnter($event)" (mouseleave)="handleLeave($event)">
+      <a href="#">Courses</a>
+      <ul class="dropdown courses">
+        <li *ngFor="let category of categories">
+          <span class="code">{{category.display}}</span>
+        </li>
+      </ul>
+    </li>
+    <li #listItem (mouseenter)="handleEnter($event)" (mouseleave)="handleLeave($event)">
+      <a href="#">Other Links</a>
+      <ul class="dropdown dropdown3">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Social</a></li>
+        <li><a href="#">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
